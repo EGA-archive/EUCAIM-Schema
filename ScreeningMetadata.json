@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Minimum clinical attributes for negative screening or control groups",
+  "type": "object",
+  "properties": {
+    "PatientID": {
+      "type": "string",
+      "description": "A unique identifier for the patient. Should match the Patient ID DICOM tag (0010,0020) and the anonymization processes.",
+      "example": "X123456"
+    },
+    "Population": {
+      "type": "string",
+      "description": "Categorization of the subjects in the dataset based on their status.",
+      "enum": [
+        "Subject on Screening with a negative result",
+        "Subject on a Control group ONTOLOGY"
+      ]
+    },
+    "Sex": {
+      "type": "string",
+      "description": "Biological sex at Birth.",
+      "enum": ["Female", "Male", "Unspecified ONTOLOGIA" ]
+    },
+    "DateOfImagingAcquisition": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when imaging study occurred for screening or control group.",
+      "example": "2024-01-01"
+    },
+    "AgeYears": {
+      "type": "number",
+      "description": "Age of the subject when the imaging study was acquired (in years, one decimal allowed).",
+      "example": 45.5
+    },
+    "Topography": {
+      "type": "string",
+      "description": "Area examined with the imaging modality (organ). In negative screening and control group cases, region and laterality are not mandatory.",
+      "example": "Lung ONTOLOGIA"
+    }
+  },
+  "required": [
+    "PatientID",
+    "Population",
+    "Sex",
+    "AgeYears"
+  ],
+  "additionalProperties": false
+}
