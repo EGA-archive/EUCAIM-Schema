@@ -23,5 +23,6 @@
         "id"
     ],
     "title": "Ontology Term",
-    "type": "object"
+    "type": "object",
+    "$comment": "The ontologies will need normalizing from their side. The ontology to be used is EUCAIM HyperOntology, found at https://hyperontology.eucaim.cancerimage.eu"
 }
