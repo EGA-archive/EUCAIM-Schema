@@ -5,28 +5,52 @@
   "properties": {
     "SegmentNumber": {
       "type": "integer",
-      "description": "Unique identification number of the segment (DICOM tag 0062,0004). ONTOLOGY?",
+      "description": "Unique identification number of the segment",
       "example": 1
     },
     "SegmentLabel": {
-      "type": "string",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "User-defined label identifying the segment (DICOM tag 0062,0005).",
-      "example": "PZ (peripheral zone of prostate) ONTOLOGY"
+      "examples":[
+        {
+                    "id": "EUCAIM:BP1000067",
+                    "label": "Chest"
+                },
+                {
+                    "id": "EUCAIM:BP1000220",
+                    "label": "Arm"
+        }]
     },
     "SegmentDescription": {
       "type": "string",
       "description": "User-defined or ontology-defined description for the segment (DICOM tag 0062,0006). In the context of EUCAIM, specific ontology terms should be used.",
-      "example": "Prostate Central Zone ONTOLOGY?"
+      "example": "Prostate Central Zone ONTOLOGY? ESPERAR A EMAIL TERE"
     },
     "SegmentationMethod": {
-      "type": "string",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Type of algorithm used to generate the segment (DICOM tag 0062,0008).",
-      "enum": ["Manual", "Semiautomatic", "Automatic" ONTOLOGY]
+      "examples":[
+        {
+                    "id": "EUCAIM:BP1000067",
+                    "label": "Chest"
+                },
+                {
+                    "id": "EUCAIM:BP1000220",
+                    "label": "Arm"
+        }]
     },
     "AlgorithmName": {
-      "type": "string",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Name(s) and version of the algorithm(s) used to generate the segment (DICOM tag 0062,0009). Mandatory if Segment Algorithm Type (0062,0008) is semiautomatic.",
-      "example": "Prostate Segmentation Tool v1.0.0 ONTOLOGY"
+      "examples":[
+        {
+                    "id": "EUCAIM:BP1000067",
+                    "label": "Chest"
+                },
+                {
+                    "id": "EUCAIM:BP1000220",
+                    "label": "Arm"
+        }]
     },
     "NumberOfAnnotators": {
       "type": "integer",
@@ -34,9 +58,17 @@
       "example": 2
     },
     "AnnotatorType": {
-      "type": "string",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "List with the specific role(s) of the expert annotator(s).",
-      "example": "Radiologist, imaging technician ONCOLOGY"
+      "examples":[
+        {
+                    "id": "EUCAIM:BP1000067",
+                    "label": "Chest"
+                },
+                {
+                    "id": "EUCAIM:BP1000220",
+                    "label": "Arm"
+        }]
     },
     "Experience": {
       "type": "string",
@@ -46,7 +78,7 @@
     "SequencesUsedForSegmentation": {
       "type": "string",
       "description": "Modality(s) or submodality(s) used to perform the segmentation.",
-      "example": "T2w, ADC, CT, CT+PET NO ENCUENTRO LA ONTOLOGY"
+      "example": "T2w, ADC, CT, CT+PET NO ENCUENTRO LA ONTOLOGY ESPERAR A EMAIL TERE"
     }
   },
   "required": [
