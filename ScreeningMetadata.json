@@ -9,17 +9,31 @@
       "example": "X123456"
     },
     "Population": {
-      "type": "string",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Categorization of the subjects in the dataset based on their status.",
-      "enum": [
-        "Subject on Screening with a negative result",
-        "Subject on a Control group ONTOLOGY"
+      "examples":[
+        {
+                    "id": "EUCAIM:IMG1000026",
+                    "label": "Computed tomography"
+                },
+                {
+                    "id": "EUCAIM:IMG1000030",
+                    "label": "Mammography"
+        }
       ]
     },
     "Sex": {
-      "type": "string",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Biological sex at Birth.",
-      "enum": ["Female", "Male", "Unspecified ONTOLOGIA" ]
+      "examples":[
+        {
+                    "id": "EUCAIM:BP1000067",
+                    "label": "Chest"
+                },
+                {
+                    "id": "EUCAIM:BP1000220",
+                    "label": "Arm"
+        }]
     },
     "DateOfImagingAcquisition": {
       "type": "string",
@@ -33,10 +47,17 @@
       "example": 45.5
     },
     "Topography": {
-      "type": "string",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",,
       "description": "Area examined with the imaging modality (organ). In negative screening and control group cases, region and laterality are not mandatory.",
-      "example": "Lung ONTOLOGIA"
-    }
+      "examples":[
+        {
+                    "id": "EUCAIM:IMG1000047",
+                    "label": "General Electric"
+                },
+                {
+                    "id": "EUCAIM:IMG1000044",
+                    "label": "Siemens"
+        }]
   },
   "required": [
     "PatientID",
