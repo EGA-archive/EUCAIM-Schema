@@ -9,71 +9,110 @@
       "example": "X123456"
     },
     "Population": {
-      "type": "string",
       "description": "Categorization of the subjects in the dataset based on their status.",
-      "enum": [
-        "Patient with Cancer EXAMPLES, AÑADIR ONTOLOGIA ",
-        "Patient with lesion not being a malignant tumor"
-      ]
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "examples":[
+        {
+                    "id": "EUCAIM:COM1001087",
+                    "label": "Patient with Cancer"
+                },
+                {
+                    "id": "EUCAIM:COM1001086",
+                    "label": "Patient with lesion not being a malignant tumor"
+        }]
     },
     "Sex": {
-      "type": "string",
       "description": "Biological sex at birth.",
-      "enum": ["Female", "Male", "Unspecified ONTOLOGIA"]
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "examples":[
+        {
+                    "id": "EUCAIM:COM1001370",
+                    "label": "Female"
+                },
+                {
+                    "id": "EUCAIM:COM1001366",
+                    "label": "Male"
+                },
+                {
+                    "id": "EUCAIM:COM1001288",
+                    "label": "Unspecified"
+      }]
     },
     "DateOfRadiologyDetection": {
       "type": "string",
       "format": "date",
       "description": "Date when the tumor or lesion was first detected by imaging or nearest diagnostic study.",
       "example": "2024-01-01",
-      "$comment": "mandatory if available"
+      "$comment": "Mandatory if available."
     },
     "DateOfPathologyConfirmationOrDiagnosticDate": {
       "type": "string",
       "format": "date",
       "description": "Date when the tumor was histologically confirmed or confirmed by imaging.",
       "example": "2024-02-01",
-      "$comment": "mandatory if available"
+      "$comment": "Mandatory if available."
     },
     "AgeAtDiagnosisYears": {
       "type": "number",
       "description": "Age of the patient at the time the tumor or lesion was confirmed.",
-      "example": 45.5
+      "example": 45
     },
     "PathologyConfirmationMethod": {
-      "type": "string",
       "description": "Method used to confirm pathology (e.g., histological biopsy or imaging for specific cases).",
-      "example": "Biopsy ONTOLOGIA",
-      "$comment": "mandatory if available"
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "example": {
+                    "id": "EUCAIM:CLIN1001712",
+                    "label": "Biopsy"
+      },
+      "$comment": "Mandatory if available."
     },
     "Topography": {
-      "type": "string",
       "description": "Location of the lesion, stratified in three steps: organ, region, and laterality.",
-      "example": "Lung, Upper Lobe, Right ONTOLOGY"
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "example": {
+                    "id": "EUCAIM:BP1000268",
+                    "label": "Structure of upper lobe of right lung"
+      },
+      "$comment": "Currently, this is a simplified version with ontology use grouping everything up. In the future, depending on the researchers answers, it may need to be stratified in organ, region, and laterality."
     },
     "Pathology": {
-      "type": "string",
       "description": "Histology and histological subtype of the lesion (ICD-O-3 if available).",
-      "example": "Adenocarcinoma / Papilar  ONTOLOGIA",
-      "$comment": "mandatory if available"
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "example": {
+                    "id": "EUCAIM:CLIN1049461",
+                    "label": "Papillary adenocarcinoma"
+      },,
+      "$comment": "Mandatory if available."
     },
     "ImagingProcedureProtocol": {
-      "type": "string",
       "description": "Specific protocol applied to obtain the radiology diagnostic image.",
-      "example": "CT of thorax with contrast ONTOLOGIA",
-      "$comment": "mandatory if available"
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "example": {
+                    "id": "EUCAIM:IMG1000076",
+                    "label": "CT of thorax with contrast"
+      },
+      "$comment": "Mandatory if available."
     },
     "Treatment": {
-      "type": "string",
       "description": "Type of treatment received by the patient.",
-      "example": " ONTOLOGIA"
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "examples": [
+        {
+                    "id": "EUCAIM:CLIN1024528",
+                    "label": "Chemotherapy"
+                },
+                {
+                    "id": "EUCAIM:COM1001099",
+                    "label": "Surgery"
+        }],
+        "$comment": "Currently it's one single treatment. It may need to become an array."
     },
     "DateOfFirstTreatment": {
       "type": "string",
       "format": "date",
       "description": "Date when first treatment occurred.",
       "example": "2024-03-01",
-      "$comment": "mandatory if available"
+      "$comment": "Mandatory if available."
     }
   },
   "required": [
