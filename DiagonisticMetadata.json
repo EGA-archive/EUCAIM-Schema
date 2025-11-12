@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Minimum clinical attributes for positive or diagnostic cases",
+  "type": "object",
+  "properties": {
+    "PatientID": {
+      "type": "string",
+      "description": "A unique identifier for the patient. Should match the Patient ID DICOM tag (0010,0020) and anonymization processes.",
+      "example": "X123456"
+    },
+    "Population": {
+      "type": "string",
+      "description": "Categorization of the subjects in the dataset based on their status.",
+      "enum": [
+        "Patient with Cancer EXAMPLES, AÑADIR ONTOLOGIA ",
+        "Patient with lesion not being a malignant tumor"
+      ]
+    },
+    "Sex": {
+      "type": "string",
+      "description": "Biological sex at birth.",
+      "enum": ["Female", "Male", "Unspecified ONTOLOGIA"]
+    },
+    "DateOfRadiologyDetection": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the tumor or lesion was first detected by imaging or nearest diagnostic study.",
+      "example": "2024-01-01",
+      "$comment": "mandatory if available"
+    },
+    "DateOfPathologyConfirmationOrDiagnosticDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the tumor was histologically confirmed or confirmed by imaging.",
+      "example": "2024-02-01",
+      "$comment": "mandatory if available"
+    },
+    "AgeAtDiagnosisYears": {
+      "type": "number",
+      "description": "Age of the patient at the time the tumor or lesion was confirmed.",
+      "example": 45.5
+    },
+    "PathologyConfirmationMethod": {
+      "type": "string",
+      "description": "Method used to confirm pathology (e.g., histological biopsy or imaging for specific cases).",
+      "example": "Biopsy ONTOLOGIA",
+      "$comment": "mandatory if available"
+    },
+    "Topography": {
+      "type": "string",
+      "description": "Location of the lesion, stratified in three steps: organ, region, and laterality.",
+      "example": "Lung, Upper Lobe, Right ONTOLOGY"
+    },
+    "Pathology": {
+      "type": "string",
+      "description": "Histology and histological subtype of the lesion (ICD-O-3 if available).",
+      "example": "Adenocarcinoma / Papilar  ONTOLOGIA",
+      "$comment": "mandatory if available"
+    },
+    "ImagingProcedureProtocol": {
+      "type": "string",
+      "description": "Specific protocol applied to obtain the radiology diagnostic image.",
+      "example": "CT of thorax with contrast ONTOLOGIA",
+      "$comment": "mandatory if available"
+    },
+    "Treatment": {
+      "type": "string",
+      "description": "Type of treatment received by the patient.",
+      "example": " ONTOLOGIA"
+    },
+    "DateOfFirstTreatment": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when first treatment occurred.",
+      "example": "2024-03-01",
+      "$comment": "mandatory if available"
+    }
+  },
+  "required": [
+    "PatientID",
+    "Population",
+    "Sex",
+    "AgeAtDiagnosisYears",
+    "Topography",
+    "Treatment"
+  ],
+  "additionalProperties": false
+}
