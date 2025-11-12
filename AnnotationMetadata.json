@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Minimum Annotation Metadata Schema",
+  "type": "object",
+  "properties": {
+    "SegmentNumber": {
+      "type": "integer",
+      "description": "Unique identification number of the segment (DICOM tag 0062,0004). ONTOLOGY?",
+      "example": 1
+    },
+    "SegmentLabel": {
+      "type": "string",
+      "description": "User-defined label identifying the segment (DICOM tag 0062,0005).",
+      "example": "PZ (peripheral zone of prostate) ONTOLOGY"
+    },
+    "SegmentDescription": {
+      "type": "string",
+      "description": "User-defined or ontology-defined description for the segment (DICOM tag 0062,0006). In the context of EUCAIM, specific ontology terms should be used.",
+      "example": "Prostate Central Zone ONTOLOGY?"
+    },
+    "SegmentationMethod": {
+      "type": "string",
+      "description": "Type of algorithm used to generate the segment (DICOM tag 0062,0008).",
+      "enum": ["Manual", "Semiautomatic", "Automatic" ONTOLOGY]
+    },
+    "AlgorithmName": {
+      "type": "string",
+      "description": "Name(s) and version of the algorithm(s) used to generate the segment (DICOM tag 0062,0009). Mandatory if Segment Algorithm Type (0062,0008) is semiautomatic.",
+      "example": "Prostate Segmentation Tool v1.0.0 ONTOLOGY"
+    },
+    "NumberOfAnnotators": {
+      "type": "integer",
+      "description": "Number of annotators involved in the annotation process.",
+      "example": 2
+    },
+    "AnnotatorType": {
+      "type": "string",
+      "description": "List with the specific role(s) of the expert annotator(s).",
+      "example": "Radiologist, imaging technician ONCOLOGY"
+    },
+    "Experience": {
+      "type": "string",
+      "description": "Years of experience of the annotator(s). Can include multiple values (comma-separated).",
+      "example": "1,2,3,5,10"
+    },
+    "SequencesUsedForSegmentation": {
+      "type": "string",
+      "description": "Modality(s) or submodality(s) used to perform the segmentation.",
+      "example": "T2w, ADC, CT, CT+PET NO ENCUENTRO LA ONTOLOGY"
+    }
+  },
+  "required": [
+    "SegmentNumber",
+    "SegmentLabel",
+    "SegmentDescription",
+    "SegmentationMethod",
+    "NumberOfAnnotators",
+    "AnnotatorType",
+    "Experience",
+    "SequencesUsedForSegmentation"
+  ],
+  "additionalProperties": false
+}
