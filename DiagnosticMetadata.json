@@ -81,7 +81,7 @@
       "example": {
                     "id": "EUCAIM:CLIN1049461",
                     "label": "Papillary adenocarcinoma"
-      },,
+      },
       "$comment": "Mandatory if available."
     },
     "ImagingProcedureProtocol": {
