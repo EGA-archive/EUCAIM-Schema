@@ -11,7 +11,7 @@
     "Population": {
       "description": "Categorization of the subjects in the dataset based on their status.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "example":[
+      "examples":[
         {
                     "id": "EUCAIM:COM1001087",
                     "label": "Patient with Cancer"
@@ -24,7 +24,7 @@
     "Sex": {
       "description": "Biological sex at birth.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "example":[
+      "examples":[
         {
                     "id": "EUCAIM:COM1001370",
                     "label": "Female"
@@ -36,7 +36,8 @@
                 {
                     "id": "EUCAIM:COM1001288",
                     "label": "Unspecified"
-      }]
+      }
+      ]
     },
     "DateOfRadiologyDetection": {
       "type": "string",
@@ -87,7 +88,7 @@
     "ImagingProcedureProtocol": {
       "description": "Specific protocol applied to obtain the radiology diagnostic image.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "example": {
+      "examples": {
                     "id": "EUCAIM:IMG1000076",
                     "label": "CT of thorax with contrast"
       },
@@ -96,7 +97,7 @@
     "Treatment": {
       "description": "Type of treatment received by the patient.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "example": [
+      "examples": [
         {
                     "id": "EUCAIM:CLIN1024528",
                     "label": "Chemotherapy"
