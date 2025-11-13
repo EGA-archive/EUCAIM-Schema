@@ -101,6 +101,5 @@
     "AnnotatorType",
     "Experience",
     "SequencesUsedForSegmentation"
-  ],
-  "additionalProperties": false
+  ]
 }
