@@ -11,7 +11,7 @@
     "image_modality": {
       "description": "Modality of the imaging study (DICOM tag 0008,0060), controlled vocabulary",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "example": [
+      "examples": [
         {
           "id": "EUCAIM:IMG1000026",
           "label": "Computed tomography"
@@ -25,7 +25,7 @@
     "image_body_part": {
       "description": "Anatomical area imaged (DICOM tag 0018,0015), controlled vocabulary",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "example": [
+      "examples": [
         {
           "id": "EUCAIM:BP1000067",
           "label": "Chest"
@@ -39,7 +39,7 @@
     "image_manufacturer": {
       "description": "Device manufacturer (DICOM tag 0008,0070), controlled vocabulary",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "example": [
+      "examples": [
         {
           "id": "EUCAIM:IMG1000047",
           "label": "General Electric"
@@ -71,5 +71,6 @@
     "date_of_image_acquisition"
   ]
 }
+
 
 
