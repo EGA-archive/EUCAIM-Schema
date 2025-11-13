@@ -11,7 +11,7 @@
     "Population": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Categorization of the subjects in the dataset based on their status.",
-      "examples": [
+      "example": [
         {
           "id": "EUCAIM:COM1002625",
           "label": "Control group"
@@ -25,7 +25,7 @@
     "Sex": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Biological sex at Birth.",
-      "examples": [
+      "example": [
         {
           "id": "EUCAIM:COM1001370",
           "label": "Female"
@@ -40,7 +40,8 @@
       "type": "string",
       "format": "date",
       "description": "Date when imaging study occurred for screening or control group.",
-      "example": "2024-01-01"
+      "example": "2024-01-01",
+      "$comment": "Mandatory if available."
     },
     "AgeYears": {
       "type": "number",
@@ -50,7 +51,7 @@
     "Topography": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Area examined with the imaging modality (organ). In negative screening and control group cases, region and laterality are not mandatory.",
-      "examples": [
+      "example": [
         {
           "id": "EUCAIM:BP1000301",
           "label": "Bladder"
