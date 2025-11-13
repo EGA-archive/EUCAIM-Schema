@@ -11,29 +11,30 @@
     "Population": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Categorization of the subjects in the dataset based on their status.",
-      "examples":[
+      "examples": [
         {
-                    "id": "EUCAIM:COM1002625",
-                    "label": "Control group"
-                },
-                {
-                    "id": "EUCAIM:COM1002626",
-                    "label": "Negative screening"
+          "id": "EUCAIM:COM1002625",
+          "label": "Control group"
+        },
+        {
+          "id": "EUCAIM:COM1002626",
+          "label": "Negative screening"
         }
       ]
     },
     "Sex": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Biological sex at Birth.",
-      "examples":[
+      "examples": [
         {
-                    "id": "EUCAIM:COM1001370",
-                    "label": "Female"
-                },
-                {
-                    "id": "EUCAIM:COM1001366",
-                    "label": "Male"
-        }]
+          "id": "EUCAIM:COM1001370",
+          "label": "Female"
+        },
+        {
+          "id": "EUCAIM:COM1001366",
+          "label": "Male"
+        }
+      ]
     },
     "DateOfImagingAcquisition": {
       "type": "string",
@@ -47,17 +48,19 @@
       "example": 45.5
     },
     "Topography": {
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",,
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Area examined with the imaging modality (organ). In negative screening and control group cases, region and laterality are not mandatory.",
-      "examples":[
+      "examples": [
         {
-                    "id": "EUCAIM:BP1000301",
-                    "label": "Bladder"
-                },
-                {
-                    "id": "EUCAIM:BP1000051",
-                    "label": "Brain"
-        }]
+          "id": "EUCAIM:BP1000301",
+          "label": "Bladder"
+        },
+        {
+          "id": "EUCAIM:BP1000051",
+          "label": "Brain"
+        }
+      ]
+    }
   },
   "required": [
     "PatientID",
