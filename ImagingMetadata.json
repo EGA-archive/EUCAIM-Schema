@@ -54,7 +54,8 @@
       "type": "string",
       "format": "date",
       "description": "Acquisition date of the image (DICOM tag 0008,0022), format YYYY-MM-DD",
-      "example": "2000-01-01"
+      "example": "2000-01-01",
+      "$comment": "Mandatory if available."
     },
     "patient_age_at_study": {
       "type": "number",
@@ -70,4 +71,5 @@
     "date_of_image_acquisition"
   ]
 }
+
 
