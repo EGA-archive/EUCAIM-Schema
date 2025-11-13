@@ -9,48 +9,45 @@
       "example": 1
     },
     "SegmentLabel": {
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "type": "string",
       "description": "User-defined label identifying the segment (DICOM tag 0062,0005).",
-      "examples":[
-        {
-                    "id": "EUCAIM:BP1000067",
-                    "label": "Chest"
-                },
-                {
-                    "id": "EUCAIM:BP1000220",
-                    "label": "Arm"
-        }]
+      "examples": "PZ (peripheral zone of prostate), CZ (central zone of prostate)"
     },
     "SegmentDescription": {
-      "type": "string",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "User-defined or ontology-defined description for the segment (DICOM tag 0062,0006). In the context of EUCAIM, specific ontology terms should be used.",
-      "example": "Prostate Central Zone ONTOLOGY? ESPERAR A EMAIL TERE"
+      "example": [
+        {
+                    "id": "EUCAIM:BP1000006",
+                    "label": "Peripheral zone of prostate"
+                },
+                {
+                    "id": "EUCAIM:BP1000168",
+                    "label": "Central zone of prostate"
+        }]
     },
     "SegmentationMethod": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Type of algorithm used to generate the segment (DICOM tag 0062,0008).",
       "examples":[
         {
-                    "id": "EUCAIM:BP1000067",
-                    "label": "Chest"
+                    "id": "EUCAIM:COM1000008",
+                    "label": "Automatic"
                 },
                 {
-                    "id": "EUCAIM:BP1000220",
-                    "label": "Arm"
-        }]
+                    "id": "EUCAIM:COM1000003",
+                    "label": "Manual"
+        },
+        {
+                    "id": "EUCAIM:COM1000005",
+                    "label": "Semiautomatic"
+        }
+      ]
     },
     "AlgorithmName": {
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "type": "string",
       "description": "Name(s) and version of the algorithm(s) used to generate the segment (DICOM tag 0062,0009). Mandatory if Segment Algorithm Type (0062,0008) is semiautomatic.",
-      "examples":[
-        {
-                    "id": "EUCAIM:BP1000067",
-                    "label": "Chest"
-                },
-                {
-                    "id": "EUCAIM:BP1000220",
-                    "label": "Arm"
-        }]
+      "examples": "Prostate segmentation Tool v1.0.0"
     },
     "NumberOfAnnotators": {
       "type": "integer",
@@ -62,13 +59,19 @@
       "description": "List with the specific role(s) of the expert annotator(s).",
       "examples":[
         {
-                    "id": "EUCAIM:BP1000067",
-                    "label": "Chest"
+                    "id": "EUCAIM:COM1001104",
+                    "label": "Radiologist"
                 },
                 {
-                    "id": "EUCAIM:BP1000220",
-                    "label": "Arm"
-        }]
+                    "id": "EUCAIM:COM1001102",
+                    "label": "Imaging technicial"
+        },
+        {
+                    "id": "EUCAIM:COM1001103",
+                    "label": "Medical oncologist"
+        }
+      ]
+      
     },
     "Experience": {
       "type": "string",
@@ -76,11 +79,19 @@
       "example": "1,2,3,5,10"
     },
     "SequencesUsedForSegmentation": {
-      "type": "string",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Modality(s) or submodality(s) used to perform the segmentation.",
-      "example": "T2w, ADC, CT, CT+PET NO ENCUENTRO LA ONTOLOGY ESPERAR A EMAIL TERE"
-    }
-  },
+      "examples":[
+        {
+                    "id": "EUCAIM:IMG1000026",
+                    "label": "Computed tomography"
+                },
+                {
+                    "id": "EUCAIM:IMG1000062",
+                    "label": "Positron emission tomography"
+        }
+      ]
+    },
   "required": [
     "SegmentNumber",
     "SegmentLabel",
