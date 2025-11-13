@@ -50,6 +50,7 @@
     },
     "AlgorithmName": {
       "type": "string",
+      "$comment": "Mandatory if Segment algorithm type (0062, 0008) is semiautomatic.",
       "description": "Name(s) and version of the algorithm(s) used to generate the segment (DICOM tag 0062,0009). Mandatory if Segment Algorithm Type (0062,0008) is semiautomatic.",
       "example": [
         "Prostate segmentation Tool v1.0.0"
