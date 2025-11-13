@@ -11,7 +11,7 @@
     "SegmentLabel": {
       "type": "string",
       "description": "User-defined label identifying the segment (DICOM tag 0062,0005).",
-      "examples": [
+      "example": [
         "PZ (peripheral zone of prostate)",
         "CZ (central zone of prostate)"
       ]
@@ -33,7 +33,7 @@
     "SegmentationMethod": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Type of algorithm used to generate the segment (DICOM tag 0062,0008).",
-      "examples": [
+      "example": [
         {
           "id": "EUCAIM:COM1000008",
           "label": "Automatic"
@@ -51,7 +51,7 @@
     "AlgorithmName": {
       "type": "string",
       "description": "Name(s) and version of the algorithm(s) used to generate the segment (DICOM tag 0062,0009). Mandatory if Segment Algorithm Type (0062,0008) is semiautomatic.",
-      "examples": [
+      "example": [
         "Prostate segmentation Tool v1.0.0"
       ]
     },
@@ -63,7 +63,7 @@
     "AnnotatorType": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "List with the specific role(s) of the expert annotator(s).",
-      "examples": [
+      "example": [
         {
           "id": "EUCAIM:COM1001104",
           "label": "Radiologist"
@@ -86,7 +86,7 @@
     "SequencesUsedForSegmentation": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Modality(s) or submodality(s) used to perform the segmentation.",
-      "examples": [
+      "example": [
         {
           "id": "EUCAIM:IMG1000026",
           "label": "Computed tomography"
