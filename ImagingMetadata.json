@@ -6,47 +6,49 @@
     "patient_id": {
       "type": "string",
       "description": "Unique identifier for the patient (DICOM tag 0010,0020)",
-      "example":"SUBJECT001"
+      "example": "SUBJECT001"
     },
     "image_modality": {
       "description": "Modality of the imaging study (DICOM tag 0008,0060), controlled vocabulary",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "examples":[
+      "examples": [
         {
-                    "id": "EUCAIM:IMG1000026",
-                    "label": "Computed tomography"
-                },
-                {
-                    "id": "EUCAIM:IMG1000030",
-                    "label": "Mammography"
+          "id": "EUCAIM:IMG1000026",
+          "label": "Computed tomography"
+        },
+        {
+          "id": "EUCAIM:IMG1000030",
+          "label": "Mammography"
         }
       ]
     },
     "image_body_part": {
       "description": "Anatomical area imaged (DICOM tag 0018,0015), controlled vocabulary",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "examples":[
+      "examples": [
         {
-                    "id": "EUCAIM:BP1000067",
-                    "label": "Chest"
-                },
-                {
-                    "id": "EUCAIM:BP1000220",
-                    "label": "Arm"
-        }]
+          "id": "EUCAIM:BP1000067",
+          "label": "Chest"
+        },
+        {
+          "id": "EUCAIM:BP1000220",
+          "label": "Arm"
+        }
+      ]
     },
     "image_manufacturer": {
       "description": "Device manufacturer (DICOM tag 0008,0070), controlled vocabulary",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "examples":[
+      "examples": [
         {
-                    "id": "EUCAIM:IMG1000047",
-                    "label": "General Electric"
-                },
-                {
-                    "id": "EUCAIM:IMG1000044",
-                    "label": "Siemens"
-        }]
+          "id": "EUCAIM:IMG1000047",
+          "label": "General Electric"
+        },
+        {
+          "id": "EUCAIM:IMG1000044",
+          "label": "Siemens"
+        }
+      ]
     },
     "date_of_image_acquisition": {
       "type": "string",
