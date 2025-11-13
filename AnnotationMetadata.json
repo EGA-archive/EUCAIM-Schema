@@ -11,7 +11,7 @@
     "SegmentLabel": {
       "type": "string",
       "description": "User-defined label identifying the segment (DICOM tag 0062,0005).",
-      "example": [
+      "examples": [
         "PZ (peripheral zone of prostate)",
         "CZ (central zone of prostate)"
       ]
@@ -19,7 +19,7 @@
     "SegmentDescription": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "User-defined or ontology-defined description for the segment (DICOM tag 0062,0006). In the context of EUCAIM, specific ontology terms should be used.",
-      "example": [
+      "examples": [
         {
           "id": "EUCAIM:BP1000006",
           "label": "Peripheral zone of prostate"
@@ -33,7 +33,7 @@
     "SegmentationMethod": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Type of algorithm used to generate the segment (DICOM tag 0062,0008).",
-      "example": [
+      "examples": [
         {
           "id": "EUCAIM:COM1000008",
           "label": "Automatic"
@@ -64,7 +64,7 @@
     "AnnotatorType": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "List with the specific role(s) of the expert annotator(s).",
-      "example": [
+      "examples": [
         {
           "id": "EUCAIM:COM1001104",
           "label": "Radiologist"
@@ -87,7 +87,7 @@
     "SequencesUsedForSegmentation": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Modality(s) or submodality(s) used to perform the segmentation.",
-      "example": [
+      "examples": [
         {
           "id": "EUCAIM:IMG1000026",
           "label": "Computed tomography"
