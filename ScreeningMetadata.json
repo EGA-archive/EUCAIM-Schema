@@ -13,12 +13,12 @@
       "description": "Categorization of the subjects in the dataset based on their status.",
       "examples":[
         {
-                    "id": "EUCAIM:IMG1000026",
-                    "label": "Computed tomography"
+                    "id": "EUCAIM:COM1002625",
+                    "label": "Control group"
                 },
                 {
-                    "id": "EUCAIM:IMG1000030",
-                    "label": "Mammography"
+                    "id": "EUCAIM:COM1002626",
+                    "label": "Negative screening"
         }
       ]
     },
@@ -27,12 +27,12 @@
       "description": "Biological sex at Birth.",
       "examples":[
         {
-                    "id": "EUCAIM:BP1000067",
-                    "label": "Chest"
+                    "id": "EUCAIM:COM1001370",
+                    "label": "Female"
                 },
                 {
-                    "id": "EUCAIM:BP1000220",
-                    "label": "Arm"
+                    "id": "EUCAIM:COM1001366",
+                    "label": "Male"
         }]
     },
     "DateOfImagingAcquisition": {
@@ -51,12 +51,12 @@
       "description": "Area examined with the imaging modality (organ). In negative screening and control group cases, region and laterality are not mandatory.",
       "examples":[
         {
-                    "id": "EUCAIM:IMG1000047",
-                    "label": "General Electric"
+                    "id": "EUCAIM:BP1000301",
+                    "label": "Bladder"
                 },
                 {
-                    "id": "EUCAIM:IMG1000044",
-                    "label": "Siemens"
+                    "id": "EUCAIM:BP1000051",
+                    "label": "Brain"
         }]
   },
   "required": [
