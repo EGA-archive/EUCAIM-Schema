@@ -64,6 +64,5 @@
     "Population",
     "Sex",
     "AgeYears"
-  ],
-  "additionalProperties": false
+  ]
 }
