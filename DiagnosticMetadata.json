@@ -11,7 +11,7 @@
     "Population": {
       "description": "Categorization of the subjects in the dataset based on their status.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "examples":[
+      "example":[
         {
                     "id": "EUCAIM:COM1001087",
                     "label": "Patient with Cancer"
@@ -24,7 +24,7 @@
     "Sex": {
       "description": "Biological sex at birth.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "examples":[
+      "example":[
         {
                     "id": "EUCAIM:COM1001370",
                     "label": "Female"
@@ -96,7 +96,7 @@
     "Treatment": {
       "description": "Type of treatment received by the patient.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "examples": [
+      "example": [
         {
                     "id": "EUCAIM:CLIN1024528",
                     "label": "Chemotherapy"
