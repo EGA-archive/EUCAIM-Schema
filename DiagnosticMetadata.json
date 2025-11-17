@@ -123,6 +123,5 @@
     "AgeAtDiagnosisYears",
     "Topography",
     "Treatment"
-  ],
-  "additionalProperties": false
+  ]
 }
