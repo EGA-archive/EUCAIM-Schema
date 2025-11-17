@@ -3,12 +3,12 @@
   "title": "Minimum clinical attributes for negative screening or control groups",
   "type": "object",
   "properties": {
-    "PatientID": {
+    "patientId": {
       "type": "string",
       "description": "A unique identifier for the patient. Should match the Patient ID DICOM tag (0010,0020) and the anonymization processes.",
       "example": "X123456"
     },
-    "Population": {
+    "population": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Categorization of the subjects in the dataset based on their status.",
       "examples": [
@@ -22,7 +22,7 @@
         }
       ]
     },
-    "Sex": {
+    "sex": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Biological sex at Birth.",
       "examples": [
@@ -40,19 +40,19 @@
         }
       ]
     },
-    "DateOfImagingAcquisition": {
+    "dateOfImagingAcquisition": {
       "type": "string",
       "format": "date",
       "description": "Date when imaging study occurred for screening or control group.",
       "example": "2024-01-01",
       "$comment": "Mandatory if available."
     },
-    "Age": {
+    "age": {
       "type": "number",
       "description": "Age of the subject when the imaging study was acquired (in years, one decimal allowed).",
       "example": 45.5
     },
-    "Topography": {
+    "topography": {
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Area examined with the imaging modality (organ). In negative screening and control group cases, region and laterality are not mandatory.",
       "examples": [
@@ -69,9 +69,9 @@
     }
   },
   "required": [
-    "PatientID",
-    "Population",
-    "Sex",
-    "Age"
+    "patientId",
+    "population",
+    "sex",
+    "age"
   ]
 }

@@ -3,12 +3,12 @@
   "title": "Minimum clinical attributes for positive or diagnostic cases",
   "type": "object",
   "properties": {
-    "PatientID": {
+    "patientId": {
       "type": "string",
       "description": "A unique identifier for the patient. Should match the Patient ID DICOM tag (0010,0020) and anonymization processes.",
       "example": "X123456"
     },
-    "Population": {
+    "population": {
       "description": "Categorization of the subjects in the dataset based on their status.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "examples":[
@@ -21,7 +21,7 @@
                     "label": "Patient with lesion not being a malignant tumor"
         }]
     },
-    "Sex": {
+    "sex": {
       "description": "Biological sex at birth.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "examples":[
@@ -39,26 +39,26 @@
       }
       ]
     },
-    "DateOfRadiologyDetection": {
+    "dateOfRadiologyDetection": {
       "type": "string",
       "format": "date",
       "description": "Date when the tumor or lesion was first detected by imaging or nearest diagnostic study.",
       "example": "2024-01-01",
       "$comment": "Mandatory if available."
     },
-    "DateOfPathologyConfirmationOrDiagnosticDate": {
+    "dateOfPathologyConfirmationOrDiagnosticDate": {
       "type": "string",
       "format": "date",
       "description": "Date when the tumor was histologically confirmed or confirmed by imaging.",
       "example": "2024-02-01",
       "$comment": "Mandatory if available."
     },
-    "AgeAtDiagnosis": {
+    "ageAtDiagnosis": {
       "type": "number",
       "description": "Age of the patient at the time the tumor or lesion was confirmed.",
       "example": 45
     },
-    "PathologyConfirmationMethod": {
+    "pathologyConfirmationMethod": {
       "description": "Method used to confirm pathology (e.g., histological biopsy or imaging for specific cases).",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "example": {
@@ -67,7 +67,7 @@
       },
       "$comment": "Mandatory if available."
     },
-    "Topography": {
+    "topography": {
       "description": "Location of the lesion, stratified in three steps: organ, region, and laterality.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "example": {
@@ -76,7 +76,7 @@
       },
       "$comment": "SUBJECT TO CHANGE, LEAVE FOR LAST, STILL UNDER DISCUSSION. Currently, this is a simplified version with ontology terms grouping everything up. In the future, depending on the researchers answers, it may need to be stratified in organ, region, and laterality."
     },
-    "Pathology": {
+    "pathology": {
       "description": "Histology and histological subtype of the lesion (ICD-O-3 if available).",
       "type": "array",
       "items": {
@@ -88,7 +88,7 @@
       }],
       "$comment": "Mandatory if available."
     },
-    "ImagingProcedureProtocol": {
+    "imagingProcedureProtocol": {
       "description": "Specific protocol applied to obtain the radiology diagnostic image.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "examples": {
@@ -97,7 +97,7 @@
       },
       "$comment": "Mandatory if available."
     },
-    "Treatment": {
+    "treatment": {
       "description": "Type of treatment received by the patient.",
       "type": "array",
       "items": {
@@ -113,7 +113,7 @@
                     "label": "Surgery"
         }]
     },
-    "DateOfFirstTreatment": {
+    "dateOfFirstTreatment": {
       "type": "string",
       "format": "date",
       "description": "Date when first treatment occurred.",
@@ -122,11 +122,11 @@
     }
   },
   "required": [
-    "PatientID",
-    "Population",
-    "Sex",
-    "AgeAtDiagnosis",
-    "Topography",
-    "Treatment"
+    "patientId",
+    "population",
+    "sex",
+    "ageAtDiagnosis",
+    "topography",
+    "treatment"
   ]
 }
