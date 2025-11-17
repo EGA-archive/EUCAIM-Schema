@@ -47,7 +47,7 @@
       "example": "2024-01-01",
       "$comment": "Mandatory if available."
     },
-    "AgeYears": {
+    "Age": {
       "type": "number",
       "description": "Age of the subject when the imaging study was acquired (in years, one decimal allowed).",
       "example": 45.5
@@ -64,13 +64,14 @@
           "id": "EUCAIM:BP1000051",
           "label": "Brain"
         }
-      ]
+      ],
+      "$comment": "SUBJECT TO CHANGE, LEAVE FOR LAST, STILL UNDER DISCUSSION. Currently, this is a simplified version with ontology terms grouping everything up. In the future, depending on the researchers answers, it may need to be stratified in organ, region, and laterality."
     }
   },
   "required": [
     "PatientID",
     "Population",
     "Sex",
-    "AgeYears"
+    "Age"
   ]
 }

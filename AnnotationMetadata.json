@@ -62,8 +62,11 @@
       "example": 2
     },
     "AnnotatorType": {
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "List with the specific role(s) of the expert annotator(s).",
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA"
+               },
       "examples": [
         {
           "id": "EUCAIM:COM1001104",
@@ -80,13 +83,17 @@
       ]
     },
     "Experience": {
-      "type": "string",
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
       "description": "Years of experience of the annotator(s). Can include multiple values (comma-separated).",
-      "example": "1,2,3,5,10"
+      "example": [1,2,3,5,10]
     },
     "SequencesUsedForSegmentation": {
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
       "description": "Modality(s) or submodality(s) used to perform the segmentation.",
+      "type": "array",
+      "items": {"$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA"},
       "examples": [
         {
           "id": "EUCAIM:IMG1000026",

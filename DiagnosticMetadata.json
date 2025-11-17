@@ -53,7 +53,7 @@
       "example": "2024-02-01",
       "$comment": "Mandatory if available."
     },
-    "AgeAtDiagnosisYears": {
+    "AgeAtDiagnosis": {
       "type": "number",
       "description": "Age of the patient at the time the tumor or lesion was confirmed.",
       "example": 45
@@ -74,15 +74,18 @@
                     "id": "EUCAIM:BP1000268",
                     "label": "Structure of upper lobe of right lung"
       },
-      "$comment": "Currently, this is a simplified version with ontology use grouping everything up. In the future, depending on the researchers answers, it may need to be stratified in organ, region, and laterality."
+      "$comment": "SUBJECT TO CHANGE, LEAVE FOR LAST, STILL UNDER DISCUSSION. Currently, this is a simplified version with ontology terms grouping everything up. In the future, depending on the researchers answers, it may need to be stratified in organ, region, and laterality."
     },
     "Pathology": {
       "description": "Histology and histological subtype of the lesion (ICD-O-3 if available).",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "example": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA"
+               },
+      "example": [{
                     "id": "EUCAIM:CLIN1049461",
                     "label": "Papillary adenocarcinoma"
-      },
+      }],
       "$comment": "Mandatory if available."
     },
     "ImagingProcedureProtocol": {
@@ -96,8 +99,11 @@
     },
     "Treatment": {
       "description": "Type of treatment received by the patient.",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "examples": [
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA"
+               },
+      "example": [
         {
                     "id": "EUCAIM:CLIN1024528",
                     "label": "Chemotherapy"
@@ -105,8 +111,7 @@
                 {
                     "id": "EUCAIM:COM1001099",
                     "label": "Surgery"
-        }],
-        "$comment": "Currently it's one single treatment. It may need to become an array."
+        }]
     },
     "DateOfFirstTreatment": {
       "type": "string",
@@ -120,7 +125,7 @@
     "PatientID",
     "Population",
     "Sex",
-    "AgeAtDiagnosisYears",
+    "AgeAtDiagnosis",
     "Topography",
     "Treatment"
   ]
