@@ -8,20 +8,6 @@
       "description": "A unique identifier for the patient. Should match the Patient ID DICOM tag (0010,0020) and anonymization processes.",
       "example": "X123456"
     },
-    "population": {
-      "description": "Categorization of the subjects in the dataset based on their status.",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "examples": [
-        {
-          "id": "EUCAIM:COM1001087",
-          "label": "Patient with Cancer"
-        },
-        {
-          "id": "EUCAIM:COM1001086",
-          "label": "Patient with lesion not being a malignant tumor"
-        }
-      ]
-    },
     "sex": {
       "description": "Biological sex at birth.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
@@ -43,7 +29,6 @@
   },
   "required": [
     "patientId",
-    "population",
     "sex"
   ]
 }
