@@ -1,49 +1,66 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Minimum clinical attributes for positive or diagnostic cases",
+  "title": "Disease patient attributes",
   "type": "object",
   "properties": {
+    "diseaseId": {
+      "type": "string",
+      "description": "Unique identifier for the diagnostic/disease. This field was not in the original EUCAIM Federated Query metadata.",
+      "example": "X123456-D01"
+    },
     "patientId": {
       "type": "string",
       "description": "A unique identifier for the patient. Should match the Patient ID DICOM tag (0010,0020) and anonymization processes.",
       "example": "X123456"
     },
-    "dateOfRadiologyDetection": {
-      "type": "string",
-      "format": "date",
-      "description": "Date when the tumor or lesion was first detected by imaging or nearest diagnostic study.",
-      "example": "2024-01-01",
-      "$comment": "Mandatory if available."
-    },
-    "dateOfPathologyConfirmationOrDiagnosticDate": {
-      "type": "string",
-      "format": "date",
-      "description": "Date when the tumor was histologically confirmed or confirmed by imaging.",
-      "example": "2024-02-01",
-      "$comment": "Mandatory if available."
-    },
     "ageAtDiagnosis": {
       "type": "number",
       "description": "Age of the patient at the time the tumor or lesion was confirmed.",
-      "example": 45
+      "example": 45.6
+  },
+    "diagnosis":{
+      "description": "Diagnosis of the disease.",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "examples": [{
+                    "id": "EUCAIM:CLIN1000075",
+                    "label": "Malignant neoplasm of prostate"
+                   },
+                   {
+                    "id": "EUCAIM:CLIN1000060",
+                    "label": "Malignant neoplasm of breast"
+                   },
+                   {
+                    "id": "EUCAIM:CLIN1000057",
+                    "label": "Malignant neoplasm of colon"
+                   },
+                   {
+                    "id": "EUCAIM:CLIN1000185",
+                    "label": "Malignant neoplasm of rectum"
+                   }
+    ]
+  },
+    "yearOfDiagnosis": {
+      "type": "integer",
+      "description": "Date when the tumor was histologically confirmed or confirmed by imaging.",
+      "example": "2022"
     },
-    "pathologyConfirmationMethod": {
+    "dateOfFirstTreatment": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when first treatment occurred.",
+      "example": "2024-03-01"
+    },
+    "pathologyConfirmation": {
       "description": "Method used to confirm pathology (e.g., histological biopsy or imaging for specific cases).",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "example": {
+      "examples": [{
                     "id": "EUCAIM:CLIN1001712",
                     "label": "Biopsy"
-      },
-      "$comment": "Mandatory if available."
-    },
-    "topography": {
-      "description": "Location of the lesion, stratified in three steps: organ, region, and laterality.",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "example": {
-                    "id": "EUCAIM:BP1000268",
-                    "label": "Structure of upper lobe of right lung"
-      },
-      "$comment": "SUBJECT TO CHANGE, LEAVE FOR LAST, STILL UNDER DISCUSSION. Currently, this is a simplified version with ontology terms grouping everything up. In the future, depending on the researchers answers, it may need to be stratified in organ, region, and laterality."
+                   },
+                   {
+                    "id": "EUCAIM:CLIN1004598",
+                    "label": "Excision"
+                   }]
     },
     "pathology": {
       "description": "Histology and histological subtype of the lesion (ICD-O-3 if available).",
@@ -52,19 +69,25 @@
         "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA"
                },
       "example": [{
-                    "id": "EUCAIM:CLIN1049461",
-                    "label": "Papillary adenocarcinoma"
-      }],
-      "$comment": "Mandatory if available."
+                    "id": "EUCAIM:CLIN1047138",
+                    "label": "Adenocarcinoma"
+                  },
+                  {
+                    "id": "EUCAIM:CLIN1063544",
+                    "label": "Papillary carcinoma"
+                  }]
     },
     "imagingProcedureProtocol": {
       "description": "Specific protocol applied to obtain the radiology diagnostic image.",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
-      "examples": {
+      "example": [{
                     "id": "EUCAIM:IMG1000076",
                     "label": "CT of thorax with contrast"
-      },
-      "$comment": "Mandatory if available."
+                  },
+                  {
+                    "id": "EUCAIM:IMG1000078",
+                    "label": "CT of breast"
+                  }]
     },
     "treatment": {
       "description": "Type of treatment received by the patient.",
@@ -81,21 +104,12 @@
                     "id": "EUCAIM:COM1001099",
                     "label": "Surgery"
         }]
-    },
-    "dateOfFirstTreatment": {
-      "type": "string",
-      "format": "date",
-      "description": "Date when first treatment occurred.",
-      "example": "2024-03-01",
-      "$comment": "Mandatory if available."
     }
-  },
+},
   "required": [
+    "diseaseId",
     "patientId",
-    "population",
-    "sex",
     "ageAtDiagnosis",
-    "topography",
-    "treatment"
+    "diagnosis"
   ]
 }

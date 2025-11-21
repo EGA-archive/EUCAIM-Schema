@@ -3,10 +3,20 @@
   "title": "EUCAIM Minimum Imaging Metadata",
   "type": "object",
   "properties": {
+      "imageId": {
+      "type": "string",
+      "description": "Unique identifier for the image. This field was not in the original EUCAIM Federated Query metadata.",
+      "example": "X123456-IMG01"
+    },
     "patientId": {
       "type": "string",
       "description": "Unique identifier for the patient (DICOM tag 0010,0020)",
-      "example": "SUBJECT001"
+      "example": "X123456"
+    },
+    "diseaseId": {
+      "type": "string",
+      "description": "Unique identifier for the diagnostic/disease. This field was not in the original EUCAIM Federated Query metadata.",
+      "example": "X123456-D01"
     },
     "imageModality": {
       "description": "Modality of the imaging study (DICOM tag 0008,0060), controlled vocabulary",
@@ -56,14 +66,10 @@
       "description": "Acquisition date of the image (DICOM tag 0008,0022), format YYYY-MM-DD",
       "example": "2000-01-01",
       "$comment": "Mandatory if available."
-    },
-    "patientAgeAtStudy": {
-      "type": "number",
-      "description": "Patient age at time of imaging study (DICOM tag 0010,1010), years with decimal allowed",
-      "example": 47
     }
   },
   "required": [
+    "imageId",
     "patientId",
     "imageModality",
     "imageBodyPart",

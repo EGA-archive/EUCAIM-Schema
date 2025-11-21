@@ -1,17 +1,27 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Tumor Marker attributes",
+  "title": "Tumor optional attributes",
   "type": "object",
   "properties": {
-    "tumorMarkerTestId": {
+    "tumorId": {
       "type": "string",
-      "description": "A unique identifier for the Tumor Marker Test.",
-      "example": "X123456-TM01"
+      "description": "A unique identifier for the Tumor. This field was not in the original EUCAIM Federated Query metadata.",
+      "example": "X123456-T01"
     },
     "patientId": {
       "type": "string",
       "description": "A unique identifier for the patient. Should match the Patient ID DICOM tag (0010,0020) and anonymization processes.",
       "example": "X123456"
+    },
+    "diseaseId": {
+      "type": "string",
+      "description": "Unique identifier for the diagnostic/disease. This field was not in the original EUCAIM Federated Query metadata.",
+      "example": "X123456-D01"
+    },
+    "imageId": {
+      "type": "string",
+      "description": "Unique identifier for the image. This field was not in the original EUCAIM Federated Query metadata.",
+      "example": "X123456-IMG01"
     },
     "tumorMarkerTestResult": {
       "description": "Result of the Tumor Marker Test, positive or negative.",
@@ -165,7 +175,8 @@
     }
   },
   "required": [
-    "tumorMarkerTestId",
-    "patientId"
+    "tumorId",
+    "patientId",
+    "diseaseId"
   ]
 }
