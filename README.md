@@ -4,30 +4,30 @@ This repository contains four JSON Schemas developed within the framework of the
 
 There are 4 json schema available:
 
-**PatientMetadata.json**
+1. **PatientMetadata.json**
 Defines the minimum set of patient attributes (e.g., patient identifier, sex).
 
-**DiseaseMetadata.json**
+2. **DiseaseMetadata.json**
 Describes a disease or diagnostic episode associated with a patient, including diagnosis, pathology, treatment information, and relevant clinical attributes.
 
-**ImagingMetadata.json**
+3. **ImagingMetadata.json**
 Contains metadata associated with imaging studies, such as modality, anatomical region, manufacturer, and date of acquisition.
 
-**TumorMetadata.json**
+4. **TumorMetadata.json**
 Provides optional tumor-related attributes, including tumor markers, staging categories, and standardized assessment systems such as BI-RADS and PI-RADS.
 
 To improve traceability and data integration within federated environments, the schemas introduce a set of structured identifiers:
 
-**patientId**
+1. **patientId**
 A unique and anonymized identifier for the patient, aligned with DICOM tag (0010,0020).
 
-**diseaseId**
+2. **diseaseId**
 An identifier corresponding to a specific diagnostic episode or disease instance for a patient.
 
-**imageId**
+3. **imageId**
 An identifier for an imaging study, linked to both the associated patient and disease.
 
-**tumorId**
+4. **tumorId**
 An identifier for a tumor or lesion, linked to patient, disease, and imaging data.
 
 This identifier structure enables explicit relationships across metadata entities, supporting consistent referencing and harmonized query execution.
