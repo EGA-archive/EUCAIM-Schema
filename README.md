@@ -1,4 +1,4 @@
-**EUCAIM Federated Query JSON Schemas**
+**EUCAIM JSON Schemas**
 
 This repository contains four JSON Schemas developed within the framework of the EUCAIM project to provide a structured, interoperable, and traceable metadata representation for the entities required in federated queries. The schemas define the minimum and optional attributes for patients, diseases, imaging studies, and tumors.
 
