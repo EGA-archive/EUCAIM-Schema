@@ -32,7 +32,7 @@ class Imaging(BaseModel, extra='forbid'):
     _id: Optional[str] = PrivateAttr()
     imagingId: str
     patientId: str
-    diseaseId: str
+    diseaseId: Optional[str]=None
     imageModality: OntologyTerm
     imageBodypart: OntologyTerm
     imageManufacturer: OntologyTerm
