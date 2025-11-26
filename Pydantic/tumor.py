@@ -28,11 +28,11 @@ class Tumor(BaseModel, extra="forbid"):
 
     _id: Optional[str] = PrivateAttr()
     # maybe they will be required
-    _patientId: Optional[str] = PrivateAttr()
-    _diseaseId: Optional[str] = PrivateAttr()
+    patientId: Optional[str] = PrivateAttr()
+    diseaseId: Optional[str] = PrivateAttr()
 
     # optional
-    _imageId: Optional[str] = PrivateAttr()
+    imageId: Optional[str] = PrivateAttr()
     tumorMarkerTestResult: Optional[OntologyTerm] = None
     cancerStageCMCategory: Optional[OntologyTerm] = None
     cancerStagePMCategory: Optional[OntologyTerm] = None
