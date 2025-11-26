@@ -27,9 +27,9 @@ class Tumor(BaseModel, extra="forbid"):
         super().__init__(**data)
 
     _id: Optional[str] = PrivateAttr()
-    # maybe they will be required
-    patientId: Optional[str] = PrivateAttr()
-    diseaseId: Optional[str] = PrivateAttr()
+    tumorId: str
+    patientId: str
+    diseaseId: str
 
     # optional
     imageId: Optional[str] = PrivateAttr()

@@ -28,4 +28,5 @@ class Patient(BaseModel, extra='forbid'):
 
         super().__init__(**data)
     _id: Optional[str] = PrivateAttr()
-    sex: Optional[OntologyTerm]=None
+    patientId: str
+    sex: OntologyTerm

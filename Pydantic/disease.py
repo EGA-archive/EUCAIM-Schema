@@ -29,9 +29,10 @@ class Disease(BaseModel, extra='forbid'):
 
         super().__init__(**data)
     _id: Optional[str] = PrivateAttr()
-    patientId: Optional[str] = PrivateAttr()
-    ageAtDiagnosis: Optional[float]=None
-    diagnosis: Optional[OntologyTerm]=None
+    diseaseId: str
+    patientId: str
+    ageAtDiagnosis: float
+    diagnosis: OntologyTerm
     yearOfDiagnosis:  Optional[int]=None
     dateOfFirstTreatment: Optional[str]=None
     pathologyConfirmation: Optional[OntologyTerm]=None
