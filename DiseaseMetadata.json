@@ -20,7 +20,7 @@
   },
     "diagnosis":{
       "description": "Diagnosis of the disease.",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
       "examples": [{
                     "id": "EUCAIM:CLIN1000075",
                     "label": "Malignant neoplasm of prostate"
@@ -52,7 +52,7 @@
     },
     "pathologyConfirmation": {
       "description": "Method used to confirm pathology (e.g., histological biopsy or imaging for specific cases).",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
       "examples": [{
                     "id": "EUCAIM:CLIN1001712",
                     "label": "Biopsy"
@@ -66,7 +66,7 @@
       "description": "Histology and histological subtype of the lesion (ICD-O-3 if available).",
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA"
+        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json"
                },
       "example": [{
                     "id": "EUCAIM:CLIN1047138",
@@ -79,7 +79,7 @@
     },
     "imagingProcedureProtocol": {
       "description": "Specific protocol applied to obtain the radiology diagnostic image.",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
       "example": [{
                     "id": "EUCAIM:IMG1000076",
                     "label": "CT of thorax with contrast"
@@ -93,7 +93,7 @@
       "description": "Type of treatment received by the patient.",
       "type": "array",
       "items": {
-        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA"
+        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json"
                },
       "example": [
         {

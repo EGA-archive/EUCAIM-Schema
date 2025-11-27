@@ -25,7 +25,7 @@
     },
     "tumorMarkerTestResult": {
       "description": "Result of the Tumor Marker Test, positive or negative.",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
       "examples": [
         {
           "id": "EUCAIM:COM1001310",
@@ -39,7 +39,7 @@
     },
     "cancerStageCMCategory": {
       "description": "The cancer stage according to the cM category system.",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
       "examples": [
         {
           "id": "EUCAIM:COM1001860",
@@ -65,7 +65,7 @@
     },
     "cancerStagePMCategory": {
       "description": "The cancer stage according to the pM category system.",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
       "examples": [
         {
           "id": "EUCAIM:COM1001845",
@@ -92,7 +92,7 @@
     "histologicGraceGleasonScore":{
         "type": "object",
         "description": "The Gleason scoring system for malignant neoplasm of prostate",
-        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
         "examples": [
           {
             "id": "EUCAIM:CLIN1025818",
@@ -111,7 +111,7 @@
     "histologicGradeISUP":{
         "type": "object",
         "description": "The International Society of Urological Pathology (ISUP) grading system for malignant neoplasm of prostate",
-        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
         "examples": [
           {
             "id": "EUCAIM:COM1001362",
@@ -130,7 +130,7 @@
     "tumorBIRADSAssesment":{
         "type": "object",
         "description": "Breast Imaging-Reporting and Data System (BI-RADS) assessment categories for breast tumors",
-        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
         "examples": [
           {
             "id": "EUCAIM:IMG1005470",
@@ -153,7 +153,7 @@
     "tumorPIRADSAssesment":{
         "type": "object",
         "description": "Prostate Imaging-Reporting and Data System (PI-RADS) assessment categories for prostate tumors",
-        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+        "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
         "examples": [
           {
             "id": "EUCAIM:IMG1005487",

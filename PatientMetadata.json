@@ -10,7 +10,7 @@
     },
     "sex": {
       "description": "Biological sex at birth.",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json?token=GHSAT0AAAAAADPDS7CAR7JO4LE3XDVBOWCG2IUSEXA",
+      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
       "examples": [
         {
           "id": "EUCAIM:COM1001370",
