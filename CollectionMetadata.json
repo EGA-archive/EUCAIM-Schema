@@ -27,15 +27,15 @@
 					],
 					"type": "string"
 				},
-				"subjects_count": {
+				"subjectsCount": {
 					"type": "integer",
 					"minimum": 0
 				},
-				"studies_count": {
+				"studiesCount": {
 					"type": "integer",
 					"minimum": 0
 				},
-				"age_range": {
+				"ageRange": {
 					"type": "object",
 					"properties": {
 						"min": {
