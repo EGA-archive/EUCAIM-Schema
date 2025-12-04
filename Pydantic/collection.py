@@ -1,9 +1,7 @@
 import re
-import argparse
 from dateutil.parser import parse
 from pydantic import (
     BaseModel,
-    ValidationError,
     field_validator,
     PrivateAttr
 )
