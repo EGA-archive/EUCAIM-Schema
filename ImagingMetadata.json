@@ -55,12 +55,13 @@
       ]
     },
     "dateOfImageAcquisition": {
-      "type": "string",
-      "format": "date",
-      "description": "Acquisition date of the image (DICOM tag 0008,0022), format YYYY-MM-DD",
-      "example": "2000-01-01",
-      "$comment": "Mandatory if available."
-    }
+    "type": "string",
+    "format": "date-time",
+    "description": "Acquisition date of the image (DICOM tag 0008,0022), in ISO 8601 date-time format (e.g. YYYY-MM-DDThh:mm:ssZ).",
+    "example": "2000-01-01T00:00:00Z",
+    "$comment": "Mandatory if available."
+}
+
   },
   "required": [
     "imageStudyId",
@@ -71,6 +72,7 @@
     "dateOfImageAcquisition"
   ]
 }
+
 
 
 
