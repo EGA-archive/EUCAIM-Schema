@@ -1,4 +1,5 @@
 import re
+from datetime import datetime
 from dateutil.parser import parse
 
 from pydantic import (
@@ -36,7 +37,7 @@ class Imaging(BaseModel, extra='forbid'):
     imageModality: OntologyTerm
     imageBodypart: OntologyTerm
     imageManufacturer: OntologyTerm
-    dateOfImageAcquisition: str
+    dateOfImageAcquisition: datetime
     @field_validator('dateOfImageAcquisition')
     @classmethod
     def check_dateOfImageAcquisition(cls, v: str) -> str:
