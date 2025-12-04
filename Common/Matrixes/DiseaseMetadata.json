@@ -41,10 +41,12 @@
     },
     "dateOfFirstTreatment": {
       "type": "string",
-      "format": "date",
-      "description": "Date-time when first treatment occurred in ISO8601 string format.",
-      "example": "2024-03-01T10:30:00+00:00"
-    },
+      "format": "date-time",
+      "description": "Date and time when the first treatment occurred, in ISO 8601 date-time format.",
+      "example": "2024-03-01T10:30:00Z",
+      "$comment": "Use ISO 8601 / RFC 3339 date-time values."
+    }
+
     "pathologyConfirmation": {
       "description": "Method used to confirm pathology (e.g., histological biopsy or imaging for specific cases).",
       "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
