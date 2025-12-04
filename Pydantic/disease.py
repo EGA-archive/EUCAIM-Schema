@@ -1,5 +1,5 @@
 import re
-
+from datetime import datetime
 from pydantic import (
     BaseModel,
     field_validator,
@@ -34,7 +34,7 @@ class Disease(BaseModel, extra='forbid'):
     ageAtDiagnosis: float
     diagnosis: OntologyTerm
     yearOfDiagnosis:  Optional[int]=None
-    dateOfFirstTreatment: Optional[str]=None
+    dateOfFirstTreatment: Optional[datetime]=None
     pathologyConfirmation: Optional[OntologyTerm]=None
     pathology: Optional[list]=None
     imagingProcedureProtocol: Optional[OntologyTerm]=None
