@@ -1,63 +1,85 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "CollectionMetadata",
-  "type": "object",
-  "properties": {
-    "collections": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": { "type": "string" },
-          "id": { "type": "string" },
-          "description": { "type": "string" },
-          "subjects_count": { "type": "integer", "minimum": 0 },
-          "studies_count": { "type": "integer", "minimum": 0 },
-          "age_range": {
-            "type": "object",
-            "properties": {
-              "min": { "type": "integer", "minimum": 0 },
-              "max": { "type": "integer", "minimum": 0 }
-            },
-            "required": ["min", "max"]
-          },
-          "modalities": {
-            "type": "array",
-            "items": { "type": "string" }
-          },
-          "body_parts": {
-            "type": "array",
-            "items": { "type": "string" }
-          },
-          "gender": {
-            "type": "array",
-            "items": { "type": "string" }
-          }
-        },
-        "required": [
-          "name",
-          "id",
-          "description",
-          "subjects_count",
-          "studies_count",
-          "age_range",
-          "modalities",
-          "body_parts",
-          "gender"
-        ]
-      }
-    },
-    "total": {
-      "type": "object",
-      "properties": {
-        "studies_count": { "type": "integer", "minimum": 0 },
-        "subjects_count": { "type": "integer", "minimum": 0 }
-      },
-      "required": ["studies_count", "subjects_count"]
-    }
-  },
-  "required": [
-    "collections",
-    "total"
-  ]
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "CollectionMetadata",
+	"type": "object",
+	"properties": {
+		"collection": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"description": "Name of the dataset",
+					"examples": [
+						"Dataset with synthetic data"
+					],
+					"type": "string"
+				},
+				"id": {
+					"description": "Unique identifier of the dataset",
+					"examples": [
+						"ds01010101"
+					],
+					"type": "string"
+				},
+				"description": {
+					"description": "Description of the dataset",
+					"examples": [
+						"This dataset provides examples of the actual data in this Beacon instance."
+					],
+					"type": "string"
+				},
+				"subjects_count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"studies_count": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"age_range": {
+					"type": "object",
+					"properties": {
+						"min": {
+							"$ref": "./Common/Definitions.json#/$defs/Age"
+						},
+						"max": {
+							"$ref": "./Common/Definitions.json#/$defs/Age"
+						}
+					},
+					"required": [
+						"min",
+						"max"
+					]
+				},
+				"modalities": {
+					"type": "array",
+					"items": {
+						"$ref": "./Common/Definitions.json#/$defs/ImageModality"
+					}
+				},
+				"bodyParts": {
+					"type": "array",
+					"items": {
+						"$ref": "./Common/Definitions.json#/$defs/BodyPart"
+					}
+				},
+				"gender": {
+					"type": "array",
+					"items": {
+						"$ref": "./Common/Definitions.json#/$defs/Sex"
+					}
+				}
+			},
+			"required": [
+				"name",
+				"id",
+				"description",
+				"subjects_count",
+				"studies_count",
+				"age_range",
+				"modalities",
+				"body_parts",
+				"gender"
+			]
+		}
+	}
 }

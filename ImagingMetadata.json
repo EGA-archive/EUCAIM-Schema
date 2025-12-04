@@ -3,7 +3,7 @@
   "title": "EUCAIM Minimum Imaging Metadata",
   "type": "object",
   "properties": {
-      "imageStudyId": {
+    "imageStudyId": {
       "type": "string",
       "description": "Unique identifier for the image. This field was not in the original EUCAIM Federated Query metadata.",
       "example": "X123456-IMG01"
@@ -14,7 +14,7 @@
     },
     "imageModality": {
       "description": "Modality of the imaging study (DICOM tag 0008,0060), controlled vocabulary",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
+      "$ref": "./Common/Definitions.json#/$defs/ImageModality",
       "examples": [
         {
           "id": "EUCAIM:IMG1000026",
@@ -28,7 +28,7 @@
     },
     "imageBodyPart": {
       "description": "Anatomical area imaged (DICOM tag 0018,0015), controlled vocabulary",
-      "$ref": "https://raw.githubusercontent.com/EGA-archive/EUCAIM-Schema/refs/heads/main/Common/OntologyTerm.json",
+      "$ref": "./Common/Definitions.json#/$defs/BodyPart",
       "examples": [
         {
           "id": "EUCAIM:BP1000067",

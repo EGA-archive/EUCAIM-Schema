@@ -9,8 +9,8 @@
       "example": "X123456-D01"
     },
     "ageAtDiagnosis": {
-      "type": "number",
       "description": "Age of the patient at the time the tumor or lesion was confirmed.",
+      "$ref": "../Definitions.json#/$defs/Age",
       "example": 45.6
   },
     "diagnosis":{
