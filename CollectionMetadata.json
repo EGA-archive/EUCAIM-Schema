@@ -73,11 +73,11 @@
 				"name",
 				"id",
 				"description",
-				"subjects_count",
-				"studies_count",
-				"age_range",
+				"subjectsCount",
+				"studiesCount",
+				"ageRange",
 				"modalities",
-				"body_parts",
+				"bodyParts",
 				"gender"
 			]
 		}

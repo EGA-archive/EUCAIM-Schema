@@ -36,7 +36,7 @@ class Collection(BaseModel, extra='forbid'):
     _id: Optional[str] = PrivateAttr()
     name: str
     id: str
-    description: Optional[str] = None
+    description: str
     ageRange:AgeRange
     modalities: List
     bodyParts: List
