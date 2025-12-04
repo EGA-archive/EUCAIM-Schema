@@ -1,12 +1,11 @@
 import re
-from dateutil.parser import parse
 from pydantic import (
     BaseModel,
     field_validator,
     PrivateAttr
 )
 
-from typing import Optional, Union, List
+from typing import Optional, List
 
 class OntologyTerm(BaseModel, extra='forbid'):
     id: str

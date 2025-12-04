@@ -1,5 +1,4 @@
 import re
-from datetime import datetime
 from dateutil.parser import parse
 
 from pydantic import (
@@ -55,7 +54,7 @@ class Disease(BaseModel, extra='forbid'):
     ageAtDiagnosis: float
     diagnosis: OntologyTerm
     yearOfDiagnosis:  Optional[int]=None
-    dateOfFirstTreatment: Optional[datetime]=None
+    dateOfFirstTreatment: Optional[str]=None
     pathologyConfirmation: Optional[OntologyTerm]=None
     pathology: Optional[list]=None
     imagingProcedureProtocol: Optional[OntologyTerm]=None
@@ -92,7 +91,7 @@ class Imaging(BaseModel, extra='forbid'):
     imageModality: OntologyTerm
     imageBodypart: OntologyTerm
     imageManufacturer: OntologyTerm
-    dateOfImageAcquisition: datetime
+    dateOfImageAcquisition: str
     @field_validator('dateOfImageAcquisition')
     @classmethod
     def check_dateOfImageAcquisition(cls, v: str) -> str:
