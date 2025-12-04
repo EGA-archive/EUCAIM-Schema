@@ -8,11 +8,6 @@
       "description": "Unique identifier for the diagnostic/disease. This field was not in the original EUCAIM Federated Query metadata.",
       "example": "X123456-D01"
     },
-    "patientId": {
-      "type": "string",
-      "description": "A unique identifier for the patient. Should match the Patient ID DICOM tag (0010,0020) and anonymization processes.",
-      "example": "X123456"
-    },
     "ageAtDiagnosis": {
       "type": "number",
       "description": "Age of the patient at the time the tumor or lesion was confirmed.",
@@ -47,8 +42,8 @@
     "dateOfFirstTreatment": {
       "type": "string",
       "format": "date",
-      "description": "Date when first treatment occurred.",
-      "example": "2024-03-01"
+      "description": "Date-time when first treatment occurred in ISO8601 string format.",
+      "example": "2024-03-01T10:30:00+00:00"
     },
     "pathologyConfirmation": {
       "description": "Method used to confirm pathology (e.g., histological biopsy or imaging for specific cases).",
@@ -104,11 +99,14 @@
                     "id": "EUCAIM:COM1001099",
                     "label": "Surgery"
         }]
+    },
+    "tumorMetadata": {
+      "description": "Additional metadata related to the tumor or lesion.",
+      "$ref": "./TumorMetadata.json"
     }
 },
   "required": [
     "diseaseId",
-    "patientId",
     "ageAtDiagnosis",
     "diagnosis"
   ]

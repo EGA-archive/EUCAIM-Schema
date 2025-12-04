@@ -25,10 +25,26 @@
           "label": "Unspecified"
         }
       ]
+    },
+    "disease": {
+      "description": "Disease information associated with the patient.",
+      "type":"array",
+      "items": {
+        "$ref": "./Common/Matrixes/DiseaseMetadata.json"
+      }
+    },
+    "imageStudy": {
+      "description": "Imaging study information associated with the patient.",
+      "type":"array",
+      "items": {
+      "$ref": "./ImagingMetadata.json"
+      }
     }
   },
   "required": [
     "patientId",
-    "sex"
+    "sex",
+    "disease",
+    "imageStudy"
   ]
 }

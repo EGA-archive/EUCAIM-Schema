@@ -3,20 +3,14 @@
   "title": "EUCAIM Minimum Imaging Metadata",
   "type": "object",
   "properties": {
-      "imageId": {
+      "imageStudyId": {
       "type": "string",
       "description": "Unique identifier for the image. This field was not in the original EUCAIM Federated Query metadata.",
       "example": "X123456-IMG01"
     },
-    "patientId": {
-      "type": "string",
-      "description": "Unique identifier for the patient (DICOM tag 0010,0020)",
-      "example": "X123456"
-    },
-    "diseaseId": {
-      "type": "string",
-      "description": "Unique identifier for the diagnostic/disease. This field was not in the original EUCAIM Federated Query metadata.",
-      "example": "X123456-D01"
+    "disease": {
+      "description": "Disease information associated with the image.",
+      "$ref": "./Common/Matrixes/DiseaseMetadata.json"
     },
     "imageModality": {
       "description": "Modality of the imaging study (DICOM tag 0008,0060), controlled vocabulary",
@@ -69,8 +63,8 @@
     }
   },
   "required": [
-    "imageId",
-    "patientId",
+    "imageStudyId",
+    "disease",
     "imageModality",
     "imageBodyPart",
     "imageManufacturer",

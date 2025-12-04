@@ -30,7 +30,7 @@ class Imaging(BaseModel, extra='forbid'):
 
         super().__init__(**data)
     _id: Optional[str] = PrivateAttr()
-    imagingId: str
+    imageStudyId: str
     patientId: str
     diseaseId: Optional[str]=None
     imageModality: OntologyTerm
