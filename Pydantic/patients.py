@@ -1,5 +1,5 @@
 import re
-from dateutil.parser import parse
+from rfc3339_validator import validate_rfc3339
 
 from pydantic import (
     BaseModel,
@@ -20,7 +20,7 @@ class OntologyTerm(BaseModel):
             raise ValueError('id must be CURIE, e.g. EUCAIM:COM1001288')
         return v.title()
 
-class Tumor(BaseModel, extra="forbid"):
+class Tumors(BaseModel, extra="forbid"):
 
     def __init__(self, **data) -> None:
         for private_key in self.__class__.__private_attributes__.keys():
@@ -40,7 +40,7 @@ class Tumor(BaseModel, extra="forbid"):
     tumorBIRADSAssesment: Optional[OntologyTerm] = None
     tumorPIRADSAssesment: Optional[OntologyTerm] = None
 
-class Disease(BaseModel, extra='forbid'):
+class Diseases(BaseModel, extra='forbid'):
     def __init__(self, **data) -> None:
         for private_key in self.__class__.__private_attributes__.keys():
             try:
@@ -57,9 +57,15 @@ class Disease(BaseModel, extra='forbid'):
     dateOfFirstTreatment: Optional[str]=None
     pathologyConfirmation: Optional[OntologyTerm]=None
     pathology: Optional[list]=None
-    imagingProcedureProtocol: Optional[OntologyTerm]=None
+    ImageStudiesProcedureProtocol: Optional[OntologyTerm]=None
     treatment: Optional[List]=None
     tumorMetadata: Optional[List]=None
+    @field_validator('dateOfFirstTreatment')
+    @classmethod
+    def validate_datetime(cls, v):
+        if not validate_rfc3339(v):
+            raise ValueError("Must be a valid RFC3339 date-time (JSON Schema format=date-time)")
+        return v
     @field_validator('pathology')
     @classmethod
     def check_pathology(cls, v):
@@ -74,9 +80,9 @@ class Disease(BaseModel, extra='forbid'):
     @classmethod
     def check_tumorMetadata(cls, v):
         for tumor_metadata in v:
-            Tumor(**tumor_metadata)
+            Tumors(**tumor_metadata)
 
-class Imaging(BaseModel, extra='forbid'):
+class ImageStudies(BaseModel, extra='forbid'):
     def __init__(self, **data) -> None:
         for private_key in self.__class__.__private_attributes__.keys():
             try:
@@ -87,22 +93,19 @@ class Imaging(BaseModel, extra='forbid'):
         super().__init__(**data)
     _id: Optional[str] = PrivateAttr()
     imageStudyId: str
-    disease: Disease
+    disease: Diseases
     imageModality: OntologyTerm
     imageBodypart: OntologyTerm
     imageManufacturer: OntologyTerm
     dateOfImageAcquisition: str
     @field_validator('dateOfImageAcquisition')
     @classmethod
-    def check_dateOfImageAcquisition(cls, v: str) -> str:
-        if isinstance(v, str):
-            try:
-                parse(v)
-            except Exception as e:
-                raise ValueError('dateOfImageAcquisition, if string, must be a date, getting this error: {}'.format(e))
-            return v
+    def validate_datetime(cls, v):
+        if not validate_rfc3339(v):
+            raise ValueError("Must be a valid RFC3339 date-time (JSON Schema format=date-time)")
+        return v
 
-class Patient(BaseModel, extra='forbid'):
+class Patients(BaseModel, extra='forbid'):
     def __init__(self, **data) -> None:
         for private_key in self.__class__.__private_attributes__.keys():
             try:
@@ -120,9 +123,9 @@ class Patient(BaseModel, extra='forbid'):
     @classmethod
     def check_diseases(cls, v):
         for disease in v:
-            Disease(**disease)
+            Diseases(**disease)
     @field_validator('imageStudies')
     @classmethod
     def check_imageStudies(cls, v):
         for image_study in v:
-            Imaging(**image_study)
+            ImageStudies(**image_study)

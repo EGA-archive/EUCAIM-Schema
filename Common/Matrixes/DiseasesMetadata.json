@@ -103,7 +103,7 @@
     },
     "tumorMetadata": {
       "description": "Additional metadata related to the tumor or lesion.",
-      "$ref": "./TumorMetadata.json"
+      "$ref": "./TumorsMetadata.json"
     }
 },
   "required": [

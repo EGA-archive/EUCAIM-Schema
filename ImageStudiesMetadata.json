@@ -10,7 +10,7 @@
     },
     "disease": {
       "description": "Disease information associated with the image.",
-      "$ref": "./Common/Matrixes/DiseaseMetadata.json"
+      "$ref": "./Common/Matrixes/DiseasesMetadata.json"
     },
     "imageModality": {
       "description": "Modality of the imaging study (DICOM tag 0008,0060), controlled vocabulary",

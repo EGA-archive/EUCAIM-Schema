@@ -30,14 +30,14 @@
       "description": "Disease information associated with the patient.",
       "type":"array",
       "items": {
-        "$ref": "./Common/Matrixes/DiseaseMetadata.json"
+        "$ref": "./Common/Matrixes/DiseasesMetadata.json"
       }
     },
     "imageStudy": {
       "description": "Imaging study information associated with the patient.",
       "type":"array",
       "items": {
-      "$ref": "./ImagingMetadata.json"
+      "$ref": "./ImageStudiesMetadata.json"
       }
     }
   },

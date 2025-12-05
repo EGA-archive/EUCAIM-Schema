@@ -53,19 +53,19 @@
 				"modalities": {
 					"type": "array",
 					"items": {
-						"$ref": "./Common/Definitions.json#/$defs/ImageModality"
+						"type": "string"
 					}
 				},
 				"bodyParts": {
 					"type": "array",
 					"items": {
-						"$ref": "./Common/Definitions.json#/$defs/BodyPart"
+						"type": "string"
 					}
 				},
 				"gender": {
 					"type": "array",
 					"items": {
-						"$ref": "./Common/Definitions.json#/$defs/Sex"
+						"type": "string"
 					}
 				}
 			},
