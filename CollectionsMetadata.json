@@ -3,8 +3,6 @@
 	"title": "CollectionMetadata",
 	"type": "object",
 	"properties": {
-		"type": "object",
-		"properties": {
 			"name": {
 				"description": "Name of the dataset",
 				"examples": [
@@ -66,7 +64,8 @@
 				"items": {
 					"type": "string"
 				}
-			},
+			}
+		},
 			"required": [
 				"name",
 				"id",
@@ -80,4 +79,4 @@
 			]
 		}
 	}
-}
+
