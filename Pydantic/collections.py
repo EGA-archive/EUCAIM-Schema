@@ -9,7 +9,7 @@ class AgeRange(BaseModel, extra='forbid'):
     min: float
     max: float
 
-class Collection(BaseModel, extra='forbid'):
+class Collections(BaseModel, extra='forbid'):
     def __init__(self, **data) -> None:
         for private_key in self.__class__.__private_attributes__.keys():
             try:
