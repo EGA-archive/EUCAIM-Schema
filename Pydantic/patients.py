@@ -36,7 +36,7 @@ class Tumors(BaseModel, extra="forbid"):
     PR: Optional[OntologyTerm] = None
     PSA: Optional[float] = None
     HER2: Optional[OntologyTerm] = None
-    KI68: Optional[float] = None
+    KI67: Optional[float] = None
     cancerStageCMCategory: Optional[OntologyTerm] = None
     cancerStagePMCategory: Optional[OntologyTerm] = None
     histologicGraceGleasonScore: Optional[OntologyTerm] = None
@@ -61,7 +61,7 @@ class Diseases(BaseModel, extra='forbid'):
     dateOfFirstTreatment: Optional[str]=None
     pathologyConfirmation: Optional[OntologyTerm]=None
     pathology: Optional[list]=None
-    ImageStudiesProcedureProtocol: Optional[OntologyTerm]=None
+    imagingProcedureProtocol: Optional[OntologyTerm]=None
     treatment: Optional[List]=None
     tumorMetadata: Optional[List]=None
     @field_validator('dateOfFirstTreatment')
@@ -99,7 +99,7 @@ class ImageStudies(BaseModel, extra='forbid'):
     imageStudyId: str
     disease: Diseases
     imageModality: OntologyTerm
-    imageBodypart: OntologyTerm
+    imageBodyPart: OntologyTerm
     imageManufacturer: OntologyTerm
     dateOfImageAcquisition: str
     @field_validator('dateOfImageAcquisition')
@@ -122,14 +122,14 @@ class Patients(BaseModel, extra='forbid'):
     patientId: str
     sex: OntologyTerm
     diseases: Optional[List]=None
-    imageStudies: Optional[List]=None
+    imageStudy: Optional[List]=None
     @field_validator('diseases')
     @classmethod
     def check_diseases(cls, v):
         for disease in v:
             Diseases(**disease)
-    @field_validator('imageStudies')
+    @field_validator('imageStudy')
     @classmethod
-    def check_imageStudies(cls, v):
+    def check_imageStudy(cls, v):
         for image_study in v:
             ImageStudies(**image_study)

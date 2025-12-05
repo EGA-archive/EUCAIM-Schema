@@ -22,6 +22,8 @@ class Collections(BaseModel, extra='forbid'):
     name: str
     id: str
     description: str
+    subjectCounts: int
+    studiesCounts: int
     ageRange:AgeRange
     modalities: List[str]
     bodyParts: List[str]

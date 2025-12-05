@@ -36,7 +36,7 @@ class Tumors(BaseModel, extra="forbid"):
     PR: Optional[OntologyTerm] = None
     PSA: Optional[float] = None
     HER2: Optional[OntologyTerm] = None
-    KI68: Optional[float] = None
+    KI67: Optional[float] = None
     cancerStageCMCategory: Optional[OntologyTerm] = None
     cancerStagePMCategory: Optional[OntologyTerm] = None
     histologicGraceGleasonScore: Optional[OntologyTerm] = None
@@ -99,7 +99,7 @@ class ImageStudies(BaseModel, extra='forbid'):
     imageStudyId: str
     disease: Optional[Diseases]=None
     imageModality: OntologyTerm
-    imageBodypart: OntologyTerm
+    imageBodyPart: OntologyTerm
     imageManufacturer: OntologyTerm
     dateOfImageAcquisition: str
     @field_validator('dateOfImageAcquisition')
